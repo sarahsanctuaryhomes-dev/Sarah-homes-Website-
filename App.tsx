@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import { Routes, Route, useNavigate, useLocation, useSearchParams, Navigate } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import GeminiAssistant from './components/GeminiAssistant';
-import FloatingWhatsApp from './components/FloatingWhatsApp';
-import Home from './pages/Home';
-import Listings from './pages/Listings';
-import ServicesPage from './pages/ServicesPage';
-import ContactPage from './pages/ContactPage';
-import PropertyModal from './components/PropertyModal';
-import { Property } from './types';
-import { MOCK_PROPERTIES } from './constants';
+import Navbar from './components/Navbar.tsx';
+import Footer from './components/Footer.tsx';
+import GeminiAssistant from './components/GeminiAssistant.tsx';
+import FloatingWhatsApp from './components/FloatingWhatsApp.tsx';
+import Home from './pages/Home.tsx';
+import Listings from './pages/Listings.tsx';
+import ServicesPage from './pages/ServicesPage.tsx';
+import ContactPage from './pages/ContactPage.tsx';
+import PropertyModal from './components/PropertyModal.tsx';
+import { Property } from './types.ts';
+import { MOCK_PROPERTIES } from './constants.ts';
 
 const App: React.FC = () => {
   const navigate = useNavigate();
@@ -20,7 +20,6 @@ const App: React.FC = () => {
   const propertyId = searchParams.get('propertyId');
   const selectedProperty = propertyId ? MOCK_PROPERTIES.find(p => p.id === propertyId) : null;
 
-  // Determine current page ID for Navbar highlighting
   const getPageId = () => {
     const path = location.pathname;
     if (path === '/') return 'home';
@@ -66,7 +65,6 @@ const App: React.FC = () => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
-  // Lock body scroll when modal is open
   useEffect(() => {
     if (selectedProperty) {
       document.body.style.overflow = 'hidden';
@@ -99,7 +97,6 @@ const App: React.FC = () => {
             path="/contact" 
             element={<ContactPage />} 
           />
-          {/* Catch all route to redirect to home */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

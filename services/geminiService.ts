@@ -1,7 +1,5 @@
 import { GoogleGenAI, Chat, GenerateContentResponse } from "@google/genai";
 
-const API_KEY = "AIzaSyCbI0f_uStpp49eVAG0qAGDcsQ1XcmH2ZI";
-
 let chatSession: Chat | null = null;
 
 const SYSTEM_INSTRUCTION = `
@@ -34,7 +32,7 @@ Guidelines:
 
 export const initializeChat = async (history?: { role: string; parts: { text: string }[] }[]): Promise<void> => {
   try {
-    const ai = new GoogleGenAI({ apiKey: API_KEY });
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     chatSession = ai.chats.create({
       model: 'gemini-3-flash-preview',
       config: {
@@ -49,11 +47,11 @@ export const initializeChat = async (history?: { role: string; parts: { text: st
 
 export const sendMessageToGemini = async (message: string): Promise<string> => {
   if (!chatSession) {
-    // Attempt to re-init if not available, though history might be lost if not passed
     await initializeChat();
-    if (!chatSession) {
-      return "I'm currently having trouble connecting to the network. Please call us directly on 0709773348 or 0791017140.";
-    }
+  }
+
+  if (!chatSession) {
+    return "I'm currently having trouble connecting to the network. Please call us directly on 0709773348 or 0791017140.";
   }
 
   try {
