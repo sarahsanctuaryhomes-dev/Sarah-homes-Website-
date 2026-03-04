@@ -54,7 +54,7 @@ const ContactPage: React.FC = () => {
             <div className="bg-brand-900 p-8 rounded-2xl shadow-lg text-white">
                <h3 className="text-xl font-bold mb-4">Chat with AI Agent</h3>
                <p className="text-brand-100 mb-4">
-                 Our AI assistant 'Kiboko' is available 24/7 to answer basic questions about our services. Click the icon in the bottom right corner.
+                 Our AI assistant 'Joan' is available 24/7 to answer basic questions about our services. Click the icon in the bottom right corner.
                </p>
             </div>
           </div>

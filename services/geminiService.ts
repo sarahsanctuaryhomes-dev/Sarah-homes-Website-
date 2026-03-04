@@ -3,7 +3,7 @@ import { GoogleGenAI, Chat, GenerateContentResponse } from "@google/genai";
 let chatSession: Chat | null = null;
 
 const SYSTEM_INSTRUCTION = `
-You are "Kiboko", a friendly and professional AI Real Estate Assistant for "Sarah Sanctuary Homes".
+You are "Joan", a friendly and professional AI Real Estate Assistant for "Sarah Sanctuary Homes".
 Your goal is to assist website visitors with inquiries about our real estate services in Uganda.
 
 Key Company Info:

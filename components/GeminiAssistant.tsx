@@ -37,7 +37,7 @@ const GeminiAssistant: React.FC = () => {
         initialMessages = [{
           id: 'welcome',
           role: 'model',
-          text: "Hello! I'm Kiboko, your virtual real estate assistant. How can I help you with properties or construction in Kampala today?",
+          text: "Hello! I'm Joan, your virtual real estate assistant. How can I help you with properties or construction in Kampala today?",
           timestamp: new Date()
         }];
       }
@@ -123,7 +123,7 @@ const GeminiAssistant: React.FC = () => {
                 <Bot className="h-6 w-6 text-white" />
               </div>
               <div>
-                <h3 className="font-bold text-base tracking-wide">QUICK HELP ASSISTANT</h3>
+                <h3 className="font-bold text-base tracking-wide">Joan Assistant</h3>
                 <div className="flex items-center text-xs text-brand-100 font-medium">
                    <span className="w-2 h-2 bg-green-400 rounded-full mr-1.5 animate-pulse shadow-[0_0_8px_rgba(74,222,128,0.8)]"></span>
                    Online • Gemini AI
