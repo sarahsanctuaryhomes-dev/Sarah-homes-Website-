@@ -3,41 +3,77 @@ import { Property, PropertyType, ListingStatus, Service } from './types';
 export const MOCK_PROPERTIES: Property[] = [
   {
     id: '1',
-    title: 'Modern Villa in Naguru',
-    price: 1500000000,
-    location: 'Naguru, Kampala',
-    type: PropertyType.HOUSE,
+    title: 'Exceptional Tea Estate Opportunity',
+    price: 32300000000, // Approx $8.5M USD in UGX
+    location: 'Fort Portal, Western Uganda',
+    type: PropertyType.COMMERCIAL,
     status: ListingStatus.FOR_SALE,
-    bedrooms: 5,
-    bathrooms: 4,
-    area: '25 Decimals',
-    description: 'A stunning modern villa with a panoramic view of the city. Features a swimming pool, servant quarters, and high-end finishes. Perfect for diplomatic residence or luxury family living.',
-    imageUrl: 'https://picsum.photos/id/122/800/600',
+    area: '668 Acres',
+    description: `*EXCEPTIONAL TEA ESTATE OPPORTUNITY ON SALE*
+
+LOCATION: FORT PORTAL, WESTERN UGANDA
+
+INVESTMENT OPPORTUNITY:
+TEA ESTATE SPANNING 668 ACRES OF LAND
+FULLY OPERATIONAL TEA FACTORY
+
+TENURE: FREEHOLD TITLE
+SELLING PRICE: $8.5 million
+
+KEY FEATURES:
+- TEA PLANTATION: 400 acres of tea-covered land, with the potential for expansion
+- TEA FACTORY: FULLY EQUIPPED & OPERATIONAL PROVIDING A READY-MADE INFRASTRUCTURE FOR PRODUCTION
+- Worker Quarters and Shades: Ample housing for workers, ensuring a smooth operation
+- LAND TENURE: Freehold land title, providing secure ownership
+- LOCATION: Strategically situated in Fort Portal, Western Uganda, known for its fertile soil
+- IDEAL CLIMATE for tea cultivation and 18km from Fort Portal town, offering easy access to markets and amenities
+- POTENTIAL EARNINGS: $2.5 millions annually, if well-managed, making this a lucrative investment opportunity`,
+    imageUrl: '/images/properties/tea-estate-main.jpg',
     images: [
-      'https://picsum.photos/id/122/800/600',
-      'https://picsum.photos/id/237/800/600',
-      'https://picsum.photos/id/13/800/600',
-      'https://picsum.photos/id/20/800/600'
+      '/images/properties/tea-estate-1.jpg',
+      '/images/properties/tea-estate-2.jpg',
+      '/images/properties/tea-estate-3.jpg'
     ],
-    virtualTourUrl: '#',
-    features: ['Swimming Pool', 'City View', 'Security System', 'Modern Kitchen', 'DSQ']
+    features: ['Tea Plantation (400 acres)', 'Fully Equipped Factory', 'Worker Quarters', 'Freehold Title', 'Fertile Soil', '18km from Fort Portal Town']
   },
   {
     id: '2',
-    title: 'Prime Residential Plot',
-    price: 350000000,
-    location: 'Namugongo, Wakiso',
-    type: PropertyType.LAND,
+    title: 'Private Island in Uganda',
+    price: 11400000000, // Approx $3M USD in UGX
+    location: 'Lake Victoria, Jinja',
+    type: PropertyType.COMMERCIAL,
     status: ListingStatus.FOR_SALE,
-    area: '50 Decimals',
-    description: 'Ready to build mailo land in a rapidly developing neighborhood. Excellent access roads and utilities available. Walking distance to the martyrs shrine.',
-    imageUrl: 'https://picsum.photos/id/124/800/600',
+    area: '10 Acres',
+    description: `*PRIVATE ISLAND IN UGANDA, EAST AFRICA IS STILL AVAILABLE FOR SALE*
+
+With incredible views of Lake Victoria and the shores of Jinja in Uganda, this ten-acre private island has a well-developed landscape with a variety of bird life. It is a home to 50 species of cormorants and egrets. A masterpiece and an amazing location for an investment opportunity for tourism development or as a private retreat.
+
+The Island is on a 49-year renewable lease with 17 years currently remaining. The island is a 20-minute boat ride from the Source of the Nile. The island and all assets including 3 boats and one Jet Ski are available for immediate sale.
+
+*ASSETS INCLUDED:*
+- 3 self-contained cottages
+- 2 buildings that each house 2 self-contained rooms
+- Restaurant / Kitchen / Bar & Lookout lounge area
+- Swimming pool & Basic staff quarters
+- Solar electricity with backup generators to charge solar units
+- Solar hot water for the rooms
+- All existing tables/chairs, kitchen and serving utensils, linens, etc.
+- Manicured garden with a variety of fruit trees planted
+- All assets at "Rumors at the Source of the Nile" (a small bar/snack place located at the source of the Nile in Jinja)
+
+*BOATS ON OFFER IN PACKAGE:*
+- Double decker pontoon (10.15m x 4.5m) with dual 85 hp engines carrying 15-20 people. Comes with helm console, deck lights, generator, navigation lights, on-board flushable toilet and hand basin, shower, kitchenette with sink unit, two-plate burner, and gas-powered fridge.
+- Speed boat with 200 hp engine carrying seven people
+- Wave trekker / Jet Ski
+
+*PRICE:* $3 MILLION`,
+    imageUrl: '/images/properties/private-island-main.jpg',
     images: [
-      'https://picsum.photos/id/124/800/600',
-      'https://picsum.photos/id/110/800/600',
-      'https://picsum.photos/id/116/800/600'
+      '/images/properties/private-island-1.jpg',
+      '/images/properties/private-island-2.jpg',
+      '/images/properties/private-island-3.jpg'
     ],
-    features: ['Mailo Land', 'Walled', 'Water Connected', 'Power Connected']
+    features: ['10 Acres', 'Swimming Pool', 'Solar Power', '3 Boats & Jet Ski', 'Restaurant & Bar', '7 Cottages/Rooms']
   },
   {
     id: '3',
@@ -50,11 +86,11 @@ export const MOCK_PROPERTIES: Property[] = [
     bathrooms: 3,
     area: '200 sqm',
     description: 'High-end apartment in the heart of Kololo. Walking distance to acacia mall and international schools. Features a rooftop gym and terrace.',
-    imageUrl: 'https://picsum.photos/id/188/800/600',
+    imageUrl: '/images/properties/apartment-main.jpg',
     images: [
-      'https://picsum.photos/id/188/800/600',
-      'https://picsum.photos/id/24/800/600',
-      'https://picsum.photos/id/42/800/600'
+      '/images/properties/apartment-1.jpg',
+      '/images/properties/apartment-2.jpg',
+      '/images/properties/apartment-3.jpg'
     ],
     virtualTourUrl: '#',
     features: ['Gym', 'Backup Generator', 'Elevator', '24/7 Guard', 'Rooftop Terrace']
@@ -68,10 +104,10 @@ export const MOCK_PROPERTIES: Property[] = [
     status: ListingStatus.FOR_SALE,
     area: '1 Acre',
     description: 'Industrial land perfect for warehousing or factories. Fully surveyed with clear titles. Direct access to the Jinja highway.',
-    imageUrl: 'https://picsum.photos/id/203/800/600',
+    imageUrl: '/images/properties/commercial-main.jpg',
     images: [
-      'https://picsum.photos/id/203/800/600',
-      'https://picsum.photos/id/352/800/600'
+      '/images/properties/commercial-1.jpg',
+      '/images/properties/commercial-2.jpg'
     ],
     features: ['Industrial Zoning', 'Tarmac Access', '3 Phase Power', 'Container Depot Ready']
   },
@@ -86,11 +122,11 @@ export const MOCK_PROPERTIES: Property[] = [
     bathrooms: 3,
     area: '30 Decimals',
     description: 'Spacious family home with a large garden. Perfect for raising a family away from the city noise. Recently renovated kitchen.',
-    imageUrl: 'https://picsum.photos/id/219/800/600',
+    imageUrl: '/images/properties/family-home-main.jpg',
     images: [
-      'https://picsum.photos/id/219/800/600',
-      'https://picsum.photos/id/239/800/600',
-      'https://picsum.photos/id/250/800/600'
+      '/images/properties/family-home-1.jpg',
+      '/images/properties/family-home-2.jpg',
+      '/images/properties/family-home-3.jpg'
     ],
     features: ['Large Garden', 'Garage', 'Water Tank', 'Perimeter Wall']
   },
@@ -105,12 +141,12 @@ export const MOCK_PROPERTIES: Property[] = [
     bathrooms: 6,
     area: '40 Decimals',
     description: 'Exquisite hilltop property with lake views. Includes a private cinema, sauna, and professionally landscaped gardens. Ultimate privacy.',
-    imageUrl: 'https://picsum.photos/id/235/800/600',
+    imageUrl: '/images/properties/hilltop-main.jpg',
     images: [
-      'https://picsum.photos/id/235/800/600',
-      'https://picsum.photos/id/238/800/600',
-      'https://picsum.photos/id/221/800/600',
-      'https://picsum.photos/id/220/800/600'
+      '/images/properties/hilltop-1.jpg',
+      '/images/properties/hilltop-2.jpg',
+      '/images/properties/hilltop-3.jpg',
+      '/images/properties/hilltop-4.jpg'
     ],
     virtualTourUrl: '#',
     features: ['Lake View', 'Home Cinema', 'Sauna', 'Gated Community', 'Smart Home Features']
@@ -150,25 +186,29 @@ export const TESTIMONIALS = [
     name: 'Godfrey K.',
     role: 'Diaspora Investor',
     content: 'Buying land in Uganda while living in the UK was stressful until I found Sarah Sanctuary Homes. They handled the title verification and fencing perfectly.',
-    image: 'https://picsum.photos/id/1005/100/100'
+    image: '/images/testimonials/godfrey.jpg'
   },
   {
     id: '2',
     name: 'Amina M.',
     role: 'Homeowner',
     content: 'The construction management team was transparent. I received weekly video updates of my house in Kira. Highly recommended!',
-    image: 'https://picsum.photos/id/338/100/100'
+    image: '/images/testimonials/amina.jpg'
   },
   {
     id: '3',
     name: 'John S.',
     role: 'Land Seller',
     content: 'They helped me survey and subdivide my family land in Mukono quickly. The process was smooth and professional.',
-    image: 'https://picsum.photos/id/64/100/100'
+    image: '/images/testimonials/john.jpg'
   }
 ];
 
 export const FAQS = [
+  {
+    question: 'How can someone in the Diaspora buy property in Uganda safely?',
+    answer: 'For diaspora investors, we offer an end-to-end secure process. We handle title verification, provide live video tours of the property, process all legal paperwork digitally, and act as your trusted proxy on the ground to prevent fraud.'
+  },
   {
     question: 'How do you verify land titles?',
     answer: 'We conduct rigorous due diligence by verifying the title deed at the Ministry of Lands zonal office, conducting boundary opening with a surveyor, and consulting local authorities (LCs) to ensure there are no disputes.'

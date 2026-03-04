@@ -11,8 +11,9 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 overflow-hidden">
         <img
-          src="https://picsum.photos/id/164/1920/1080" 
+          src="/images/hero-bg.jpg" 
           alt="Modern Architecture and Real Estate in Kampala Uganda"
+          loading="lazy"
           className="w-full h-full object-cover opacity-50"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent"></div>

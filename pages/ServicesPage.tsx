@@ -54,7 +54,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onContactClick }) => {
                 </div>
                 <div className="rounded-2xl overflow-hidden shadow-xl h-80">
                     <img 
-                        src="https://picsum.photos/id/20/800/600" 
+                        src="/images/services/survey-equipment.jpg" 
                         alt="Professional Land Surveying Equipment in Kampala"
                         loading="lazy" 
                         className="w-full h-full object-cover"
@@ -68,7 +68,7 @@ const ServicesPage: React.FC<ServicesPageProps> = ({ onContactClick }) => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center lg:flex-row-reverse">
                  <div className="order-last lg:order-first rounded-2xl overflow-hidden shadow-xl h-80">
                     <img 
-                        src="https://picsum.photos/id/302/800/600" 
+                        src="/images/services/construction-site.jpg" 
                         alt="Construction Site Management Project in Uganda"
                         loading="lazy"
                         className="w-full h-full object-cover"

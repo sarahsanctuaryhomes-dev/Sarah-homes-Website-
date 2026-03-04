@@ -7,7 +7,7 @@ const DiasporaSection: React.FC = () => {
       {/* Background with overlay */}
       <div className="absolute inset-0">
         <img 
-          src="https://picsum.photos/id/48/1920/1080" 
+          src="/images/diaspora-bg.jpg" 
           alt="Ugandan Diaspora Investment" 
           className="w-full h-full object-cover opacity-20"
           loading="lazy"
@@ -61,7 +61,7 @@ const DiasporaSection: React.FC = () => {
           <div className="relative hidden lg:block">
             <div className="absolute -inset-4 bg-brand-500/20 rounded-2xl blur-xl"></div>
             <img 
-              src="https://picsum.photos/id/101/800/1000" 
+              src="/images/diaspora-homeowner.jpg" 
               alt="Happy homeowner in Uganda" 
               className="relative rounded-2xl shadow-2xl border border-gray-700"
               loading="lazy"
@@ -71,7 +71,7 @@ const DiasporaSection: React.FC = () => {
               <div className="flex items-center gap-2 mb-2">
                 <div className="flex -space-x-2">
                   {[1,2,3].map(i => (
-                    <img key={i} src={`https://picsum.photos/id/${50+i}/50/50`} className="w-8 h-8 rounded-full border-2 border-white" alt="" />
+                    <img key={i} src={`/images/testimonials/client-${i}.jpg`} className="w-8 h-8 rounded-full border-2 border-white" alt="" loading="lazy" />
                   ))}
                 </div>
                 <span className="text-gray-900 font-bold text-sm">500+ Clients</span>

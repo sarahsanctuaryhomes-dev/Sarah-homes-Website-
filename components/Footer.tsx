@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              We provide comprehensive real estate solutions in Uganda. From land surveying to construction project management, we build your dreams on solid ground.
+              We provide comprehensive real estate solutions in Uganda. From verified land sales, luxury properties, and secure diaspora investments to land surveying, property rehabilitation, and full-scale construction project management, we build your dreams on solid ground.
             </p>
             <div className="flex space-x-4">
               <a 

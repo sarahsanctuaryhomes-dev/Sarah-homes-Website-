@@ -70,6 +70,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose, onCont
                        <img 
                          src={activeImage} 
                          alt={property.title} 
+                         loading="lazy"
                          className="w-full h-full object-cover cursor-pointer hover:opacity-95 transition-opacity"
                          onClick={() => setIsLightboxOpen(true)}
                        />
@@ -93,7 +94,7 @@ const PropertyModal: React.FC<PropertyModalProps> = ({ property, onClose, onCont
                          onClick={() => { setActiveImage(img); setShowTour(false); }}
                          className={`relative flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${activeImage === img && !showTour ? 'border-brand-600 opacity-100' : 'border-transparent opacity-70 hover:opacity-100'}`}
                        >
-                         <img src={img} alt="" className="w-full h-full object-cover" />
+                         <img src={img} alt="" loading="lazy" className="w-full h-full object-cover" />
                        </button>
                      ))}
                      {property.virtualTourUrl && (

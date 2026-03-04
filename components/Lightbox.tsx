@@ -58,6 +58,7 @@ const Lightbox: React.FC<LightboxProps> = ({ images, isOpen, startIndex, onClose
         <img 
           src={images[currentIndex]} 
           alt={`Gallery image ${currentIndex + 1}`} 
+          loading="lazy"
           className="max-w-full max-h-full object-contain select-none shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         />
