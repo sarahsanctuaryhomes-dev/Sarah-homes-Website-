@@ -77,23 +77,20 @@ The Island is on a 49-year renewable lease with 17 years currently remaining. Th
   },
   {
     id: '3',
-    title: 'Luxury Apartment Complex',
-    price: 850000000,
-    location: 'Kololo, Kampala',
-    type: PropertyType.HOUSE,
+    title: 'Residential Plot in Matugga',
+    price: 63000000,
+    location: 'Nabinaka, Matugga, Nansana municipality',
+    type: PropertyType.LAND,
     status: ListingStatus.FOR_SALE,
-    bedrooms: 3,
-    bathrooms: 3,
-    area: '200 sqm',
-    description: 'High-end apartment in the heart of Kololo. Walking distance to acacia mall and international schools. Features a rooftop gym and terrace.',
-    imageUrl: '/images/properties/apartment-main.jpg',
+    area: '50x100',
+    description: 'Prime residential plot located in Nabinaka, Matugga within Nansana municipality. Comes with a ready title, perfect for immediate development.',
+    imageUrl: '/images/properties/matugga-land-main.jpg',
     images: [
-      '/images/properties/apartment-1.jpg',
-      '/images/properties/apartment-2.jpg',
-      '/images/properties/apartment-3.jpg'
+      '/images/properties/matugga-land-1.jpg',
+      '/images/properties/matugga-land-2.jpg',
+      '/images/properties/matugga-land-3.jpg'
     ],
-    virtualTourUrl: '#',
-    features: ['Gym', 'Backup Generator', 'Elevator', '24/7 Guard', 'Rooftop Terrace']
+    features: ['Ready Title', '50x100 Plot Size', 'Residential Zoning', 'Accessible Roads']
   },
   {
     id: '4',
