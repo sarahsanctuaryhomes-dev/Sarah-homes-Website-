@@ -94,19 +94,21 @@ The Island is on a 49-year renewable lease with 17 years currently remaining. Th
   },
   {
     id: '4',
-    title: 'Commercial Surveyed Land',
-    price: 1200000000,
-    location: 'Namanve Industrial Park',
-    type: PropertyType.LAND,
+    title: 'Spacious Family Home in Nakawuka',
+    price: 650000000,
+    location: 'Nakawuka, off Entebbe Road',
+    type: PropertyType.HOUSE,
     status: ListingStatus.FOR_SALE,
+    bedrooms: 4,
     area: '1 Acre',
-    description: 'Industrial land perfect for warehousing or factories. Fully surveyed with clear titles. Direct access to the Jinja highway.',
-    imageUrl: '/images/properties/commercial-main.jpg',
+    description: 'Beautiful 4-bedroom family home situated on a spacious 1-acre plot in Nakawuka, off Entebbe Road. Includes a separate boy\'s quarters.',
+    imageUrl: '/images/properties/nakawuka-home-main.jpg',
     images: [
-      '/images/properties/commercial-1.jpg',
-      '/images/properties/commercial-2.jpg'
+      '/images/properties/nakawuka-home-1.jpg',
+      '/images/properties/nakawuka-home-2.jpg',
+      '/images/properties/nakawuka-home-3.jpg'
     ],
-    features: ['Industrial Zoning', 'Tarmac Access', '3 Phase Power', 'Container Depot Ready']
+    features: ['4 Bedrooms', 'Boy\'s Quarters', '1 Acre Land', 'Off Entebbe Road']
   },
   {
     id: '5',
