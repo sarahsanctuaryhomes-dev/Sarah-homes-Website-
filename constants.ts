@@ -112,22 +112,20 @@ The Island is on a 49-year renewable lease with 17 years currently remaining. Th
   },
   {
     id: '5',
-    title: 'Cozy Family Home',
-    price: 450000000,
-    location: 'Gayaza, Wakiso',
-    type: PropertyType.HOUSE,
-    status: ListingStatus.PENDING,
-    bedrooms: 4,
-    bathrooms: 3,
-    area: '30 Decimals',
-    description: 'Spacious family home with a large garden. Perfect for raising a family away from the city noise. Recently renovated kitchen.',
-    imageUrl: '/images/properties/family-home-main.jpg',
+    title: 'Island on sale in Garuga, Lake Victoria',
+    price: 3000000000,
+    location: 'Garuga, Lake Victoria',
+    type: PropertyType.LAND,
+    status: ListingStatus.FOR_SALE,
+    area: '15 Acres',
+    description: 'Island on sale in Garuga, Lake Victoria. Size: 15 acres. Land tenure: Private mailo land with title.',
+    imageUrl: '/images/properties/garuga-island-main.jpg',
     images: [
-      '/images/properties/family-home-1.jpg',
-      '/images/properties/family-home-2.jpg',
-      '/images/properties/family-home-3.jpg'
+      '/images/properties/garuga-island-1.jpg',
+      '/images/properties/garuga-island-2.jpg',
+      '/images/properties/garuga-island-3.jpg'
     ],
-    features: ['Large Garden', 'Garage', 'Water Tank', 'Perimeter Wall']
+    features: ['15 Acres', 'Lake Victoria View', 'Private Mailo Land', 'Ready Title']
   },
   {
     id: '6',

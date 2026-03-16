@@ -31,8 +31,12 @@ Guidelines:
 `;
 
 export const initializeChat = async (history?: { role: string; parts: { text: string }[] }[]): Promise<void> => {
+  if (!process.env.GEMINI_API_KEY) {
+    console.error("GEMINI_API_KEY is not defined.");
+    return;
+  }
   try {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
     chatSession = ai.chats.create({
       model: 'gemini-3-flash-preview',
       config: {
