@@ -33,6 +33,15 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a 
+                href="https://share.google/6uftBNMhVFIdDYKtS" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors" 
+                aria-label="Google Business Profile"
+              >
+                <MapPin className="h-5 w-5" />
+              </a>
+              <a 
                 href="https://www.facebook.com/profile.php?id=61558013535933" 
                 target="_blank"
                 rel="noopener noreferrer"

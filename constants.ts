@@ -129,24 +129,19 @@ The Island is on a 49-year renewable lease with 17 years currently remaining. Th
   },
   {
     id: '6',
-    title: 'Hilltop Estate',
-    price: 2200000000,
-    location: 'Muyenga, Kampala',
-    type: PropertyType.HOUSE,
+    title: 'Residential Plot in Kikandwa',
+    price: 15000000,
+    location: 'Kikandwa, Hoima Road',
+    type: PropertyType.LAND,
     status: ListingStatus.FOR_SALE,
-    bedrooms: 6,
-    bathrooms: 6,
-    area: '40 Decimals',
-    description: 'Exquisite hilltop property with lake views. Includes a private cinema, sauna, and professionally landscaped gardens. Ultimate privacy.',
-    imageUrl: '/images/properties/hilltop-main.jpg',
+    area: '50x100',
+    description: 'Titled residential plot, 3km off tarmac.',
+    imageUrl: '/images/properties/kikandwa-land-main.jpg',
     images: [
-      '/images/properties/hilltop-1.jpg',
-      '/images/properties/hilltop-2.jpg',
-      '/images/properties/hilltop-3.jpg',
-      '/images/properties/hilltop-4.jpg'
+      '/images/properties/kikandwa-land-main.jpg',
+      '/images/properties/kikandwa-land-1.jpg'
     ],
-    virtualTourUrl: '#',
-    features: ['Lake View', 'Home Cinema', 'Sauna', 'Gated Community', 'Smart Home Features']
+    features: ['Titled', '50x100 Plot Size', '3km off Tarmac']
   }
 ];
 
