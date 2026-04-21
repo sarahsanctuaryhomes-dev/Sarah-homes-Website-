@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({ onCtaClick }) => {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="md:w-2/3 lg:w-1/2">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
             Build Your Future <br/>
             <span className="text-brand-500">On Solid Ground</span>
           </h1>

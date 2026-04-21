@@ -6,6 +6,9 @@ import GeminiAssistant from './components/GeminiAssistant.tsx';
 import FloatingWhatsApp from './components/FloatingWhatsApp.tsx';
 import Home from './pages/Home.tsx';
 import Listings from './pages/Listings.tsx';
+import BlogPage from './pages/BlogPage.tsx';
+import SingleBlogPostPage from './pages/SingleBlogPostPage.tsx';
+import AboutPage from './pages/AboutPage.tsx';
 import ServicesPage from './pages/ServicesPage.tsx';
 import ContactPage from './pages/ContactPage.tsx';
 import PropertyModal from './components/PropertyModal.tsx';
@@ -24,6 +27,8 @@ const App: React.FC = () => {
     const path = location.pathname;
     if (path === '/') return 'home';
     if (path.startsWith('/listings')) return 'listings';
+    if (path.startsWith('/blog')) return 'blog';
+    if (path.startsWith('/about')) return 'about';
     if (path.startsWith('/services')) return 'services';
     if (path.startsWith('/contact')) return 'contact';
     return 'home';
@@ -37,8 +42,14 @@ const App: React.FC = () => {
       case 'listings':
         navigate('/listings');
         break;
+      case 'about':
+        navigate('/about');
+        break;
       case 'services':
         navigate('/services');
+        break;
+      case 'blog':
+        navigate('/blog');
         break;
       case 'contact':
         navigate('/contact');
@@ -77,7 +88,7 @@ const App: React.FC = () => {
   }, [selectedProperty]);
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-brand-100 selection:text-brand-900">
+    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-brand-100 selection:text-brand-900 overflow-x-hidden">
       <Navbar currentPage={getPageId()} onNavigate={handleNavigate} />
       <main className="flex-grow">
         <Routes>
@@ -88,6 +99,18 @@ const App: React.FC = () => {
           <Route 
             path="/listings" 
             element={<Listings onSelectProperty={handleSelectProperty} />} 
+          />
+          <Route 
+            path="/blog" 
+            element={<BlogPage />} 
+          />
+          <Route 
+            path="/blog/:id" 
+            element={<SingleBlogPostPage />} 
+          />
+          <Route 
+            path="/about" 
+            element={<AboutPage />} 
           />
           <Route 
             path="/services" 

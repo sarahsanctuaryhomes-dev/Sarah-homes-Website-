@@ -34,6 +34,24 @@ export interface Service {
   iconName: string;
 }
 
+export interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: {
+    name: string;
+    avatar: string;
+    social: {
+      twitter?: string;
+      linkedin?: string;
+      facebook?: string;
+    }
+  };
+  image: string;
+  date: string;
+}
+
 export interface ChatMessage {
   id: string;
   role: 'user' | 'model';

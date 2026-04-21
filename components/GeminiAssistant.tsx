@@ -12,14 +12,6 @@ const GeminiAssistant: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
 
   // Initialize and Load History
-  useEffect(() => {
-    // Auto-open after delay
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };

@@ -12,6 +12,8 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
   const navLinks = [
     { name: 'Home', id: 'home' },
     { name: 'Properties', id: 'listings' },
+    { name: 'Blog', id: 'blog' },
+    { name: 'About', id: 'about' },
     { name: 'Services', id: 'services' },
     { name: 'Contact', id: 'contact' },
   ];
@@ -24,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 md:h-20 transition-all duration-300">
+        <div className="flex justify-between h-14 md:h-20 transition-all duration-300">
           <div className="flex items-center cursor-pointer" onClick={() => handleNav('home')}>
             <Home className="h-7 w-7 md:h-8 md:w-8 text-brand-700" />
             <div className="ml-2 flex flex-col">

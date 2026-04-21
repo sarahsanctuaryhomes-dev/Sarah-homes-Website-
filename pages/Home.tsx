@@ -1,16 +1,11 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import TrustSafety from '../components/TrustSafety';
-import DiasporaSection from '../components/DiasporaSection';
-import BuyerCosts from '../components/BuyerCosts';
-import ServiceCard from '../components/ServiceCard';
 import PropertyCard from '../components/PropertyCard';
-import ContactForm from '../components/ContactForm';
 import Testimonials from '../components/Testimonials';
-import FAQ from '../components/FAQ';
-import { SERVICES, MOCK_PROPERTIES } from '../constants';
+import BlogPreview from '../components/BlogPreview';
+import { MOCK_PROPERTIES } from '../constants';
 import { Property } from '../types';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ShieldCheck, MapPin, Building2 } from 'lucide-react';
 
 interface HomeProps {
   onNavigate: (page: string) => void;
@@ -25,55 +20,29 @@ const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProperty }) => {
     <div className="flex flex-col min-h-screen">
       <Hero onCtaClick={() => onNavigate('listings')} />
 
-      {/* Trust & Safety - High Priority */}
-      <TrustSafety />
-
-      {/* Stats Section */}
-      <section className="bg-brand-900 py-12 text-white">
+      {/* Trust & Safety Highlights - Brief Version */}
+      <section className="py-12 bg-gray-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-brand-700/50">
-            <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2 text-brand-400">20+</div>
-              <div className="text-xs md:text-sm text-brand-100 uppercase tracking-wider">Properties Sold</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2 text-brand-400">20+</div>
-              <div className="text-xs md:text-sm text-brand-100 uppercase tracking-wider">Projects Managed</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2 text-brand-400">5</div>
-              <div className="text-xs md:text-sm text-brand-100 uppercase tracking-wider">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2 text-brand-400">8+</div>
-              <div className="text-xs md:text-sm text-brand-100 uppercase tracking-wider">Districts Covered</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section id="services" className="py-12 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-4">Comprehensive Real Estate Solutions</h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
-              We go beyond just selling. We ensure your investment is secure, surveyed, and built to perfection.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {SERVICES.map((service) => (
-              <ServiceCard key={service.id} service={service} />
-            ))}
-          </div>
-          <div className="mt-10 md:mt-12 text-center">
-             <button 
-                onClick={() => onNavigate('services')}
-                className="px-8 py-4 bg-brand-900 text-white font-bold rounded-lg hover:bg-brand-800 transition-all shadow-lg hover:-translate-y-1 w-full md:w-auto"
-             >
-               Learn More About Our Services
-             </button>
-          </div>
+           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center">
+                 <ShieldCheck className="h-10 w-10 text-brand-700 mb-4" />
+                 <h3 className="text-xl font-bold text-gray-900 mb-2">Verified Titles</h3>
+                 <p className="text-gray-600 mb-4">We conduct rigorous due diligence on every property.</p>
+                 <button onClick={() => onNavigate('about')} className="text-brand-700 font-semibold hover:text-brand-900">Learn more &rarr;</button>
+              </div>
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center">
+                 <Building2 className="h-10 w-10 text-brand-700 mb-4" />
+                 <h3 className="text-xl font-bold text-gray-900 mb-2">Design & Build</h3>
+                 <p className="text-gray-600 mb-4">From foundation to finishing, we manage your project.</p>
+                 <button onClick={() => onNavigate('services')} className="text-brand-700 font-semibold hover:text-brand-900">View services &rarr;</button>
+              </div>
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col items-center">
+                 <MapPin className="h-10 w-10 text-brand-700 mb-4" />
+                 <h3 className="text-xl font-bold text-gray-900 mb-2">Prime Locations</h3>
+                 <p className="text-gray-600 mb-4">Exclusive access to premium plots and houses in Kampala.</p>
+                 <button onClick={() => onNavigate('listings')} className="text-brand-700 font-semibold hover:text-brand-900">Browse properties &rarr;</button>
+              </div>
+           </div>
         </div>
       </section>
 
@@ -114,64 +83,27 @@ const Home: React.FC<HomeProps> = ({ onNavigate, onSelectProperty }) => {
         </div>
       </section>
 
-      {/* Diaspora Section - New */}
-      <DiasporaSection />
-
-      {/* Buyer Costs & Calculator - New */}
-      <BuyerCosts />
-
       {/* Testimonials */}
       <Testimonials />
 
-      {/* FAQ */}
-      <FAQ />
+      {/* Blog Section */}
+      <BlogPreview />
 
-      {/* CTA / Contact Section */}
-      <section className="py-12 md:py-20 bg-brand-50" id="contact">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            <div>
-              <h2 className="text-2xl md:text-4xl font-extrabold text-gray-900 mb-4 md:mb-6">
-                Ready to Start Your Project?
-              </h2>
-              <p className="text-base md:text-lg text-gray-600 mb-8 leading-relaxed">
-                Whether you are looking for that perfect plot in Wakiso, a finished house in Munyonyo, or need a surveyor for your family land, we are here to help.
-              </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-brand-100 text-brand-700">
-                      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-bold text-gray-900">Verified Titles</h4>
-                    <p className="mt-1 text-gray-500">We conduct rigorous due diligence on every land title.</p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-brand-100 text-brand-700">
-                      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="text-lg font-bold text-gray-900">Expert Project Management</h4>
-                    <p className="mt-1 text-gray-500">From foundation to finish, we manage your construction site.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <ContactForm />
-            </div>
-          </div>
+      {/* CTA / Contact Section - Trimmed from Home */}
+      <section className="py-12 md:py-20 bg-brand-900 text-white text-center" id="contact">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+           <h2 className="text-3xl md:text-5xl font-extrabold mb-6">
+             Ready to Secure Your Property?
+           </h2>
+           <p className="text-lg md:text-xl text-brand-100 mb-10">
+             Get in touch with our experts today for site visits, verification, or consultation.
+           </p>
+           <button 
+             onClick={() => onNavigate('contact')}
+             className="px-8 py-4 bg-white text-brand-900 font-bold rounded-lg hover:bg-gray-100 transition-all shadow-xl hover:-translate-y-1"
+           >
+             Contact Us Now
+           </button>
         </div>
       </section>
     </div>

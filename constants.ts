@@ -1,4 +1,4 @@
-import { Property, PropertyType, ListingStatus, Service } from './types';
+import { Property, PropertyType, ListingStatus, Service, BlogPost } from './types';
 
 export const MOCK_PROPERTIES: Property[] = [
   {
@@ -236,5 +236,45 @@ export const FAQS = [
   {
     question: 'Do you charge a viewing fee?',
     answer: 'We encourage you to book a site visit. Depending on the location and logistics, a nominal transport fee may apply, which is refundable upon purchase.'
+  }
+];
+
+export const BLOG_POSTS: BlogPost[] = [
+  {
+    id: '1',
+    title: 'The Ultimate Checklist for Verifying Land Titles in Uganda 🇺🇬',
+    excerpt: 'Buying your first piece of land is a massive milestone! But navigating the Ugandan land market can feel intimidating. Here is your foolproof checklist for verifying land titles.',
+    content: `# The Ultimate Checklist for Verifying Land Titles in Uganda 🇺🇬
+Buying your very first piece of land is a massive milestone! Whether you are eyeing the serene environments of **Mukono**, exploring the rapidly growing neighborhoods in **Nakawuka**, or looking to settle down in fast-developing areas like **Kikandwa** and **Matuga**, the dream of homeownership is incredibly exciting.
+But let’s be real—navigating the Ugandan land market for the first time can feel a little intimidating. We’ve all heard the cautionary tales of land scams and double plotting. That’s why verifying a land title before handing over your hard-earned money is absolutely non-negotiable.
+To help you protect your investment, here is your foolproof checklist for verifying land titles in Uganda.
+### 1. Request the Right Documents
+Before anything else, ask the seller for a photocopy of the land title and a copy of their National ID. You need to cross-check that the name on the ID perfectly matches the registered owner on the title. If the seller is acting on behalf of someone else, they must have a legally registered Powers of Attorney.
+### 2. Conduct a Search at the Ministry of Lands
+This is the most critical step. Take the photocopy of the title to the relevant Ministry of Lands Zonal Office. By paying a small search fee, you can request an official search report. This report will reveal:
+ * The true registered owner of the land.
+ * The exact size and location of the plot.
+ * If there are any caveats, mortgages, or court disputes attached to the land.
+### 3. Do Your "Ground-Truthing" (Talk to the Locals)
+Documents can look perfect, but the ground reality might be different. Visit the land in person. Talk to the immediate neighbors and the local LC1 Chairperson. The local leaders know the history of the land, who the true owner is, and if there are any family disputes over the property that might not be recorded on paper.
+### 4. Open the Boundaries with a Surveyor
+Never skip this step! Hire a registered and independent surveyor to "open the boundaries." They will use the coordinates on the land title to physically map out the plot on the ground. This ensures you are buying the exact piece of land described on the title, and that it hasn't encroached on road reserves, wetlands, or a neighbor's property.
+### 5. Use a Trusted Real Estate Partner
+Let’s face it: running between land offices, dealing with surveyors, and analyzing legal jargon is exhausting. It doesn't have to be your burden to carry.
+At SARAH SANCTUARY HOMES, we believe your first home-buying experience should be a joy, not a headache. We take the stress entirely out of the equation because **we handle all the legal paperwork and title verification for you.** When you partner with us, you can breathe easy knowing every single property we show you is thoroughly vetted, verified, and 100% secure.
+Are you ready to take the next step toward owning your piece of Uganda in places like **Mukono**, **Nakawuka**, **Kikandwa**, or **Matuga**?
+**Call us on WhatsApp for a viewing today!** Let’s find the perfect, secure spot for your future home.
+`,
+    author: {
+      name: 'Sarah Sanctuary Homes',
+      avatar: '/images/team/sarah.jpg',
+      social: {
+        facebook: 'https://www.facebook.com/profile.php?id=61558013535933',
+        linkedin: 'https://maps.app.goo.gl/tDRQNW5BSrgJMJLN9', // Google Business Profile
+        twitter: 'https://www.instagram.com/sarah_sanctuaryhomes' // Mapping Insta to twitter field
+      }
+    },
+    image: '/images/blog/blog-featured.jpg',
+    date: 'April 21, 2026'
   }
 ];
