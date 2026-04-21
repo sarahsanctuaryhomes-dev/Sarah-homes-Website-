@@ -142,6 +142,26 @@ The Island is on a 49-year renewable lease with 17 years currently remaining. Th
       '/images/properties/kikandwa-land-1.jpg'
     ],
     features: ['Titled', '50x100 Plot Size', '3km off Tarmac']
+  },
+  {
+    id: '7',
+    title: '260 Acres Island in Mukono',
+    price: 3900000000,
+    location: 'Mukono, Uganda',
+    type: PropertyType.LAND,
+    status: ListingStatus.FOR_SALE,
+    area: '260 Acres',
+    description: '260 acres island on sale in Mukono, Uganda. Private mailo land with title.',
+    imageUrl: '/images/properties/mukono-island-main.jpg',
+    images: [
+      '/images/properties/mukono-island-1.jpg',
+      '/images/properties/mukono-island-2.jpg',
+      '/images/properties/mukono-island-3.jpg',
+      '/images/properties/mukono-island-4.jpg',
+      '/images/properties/mukono-island-5.jpg',
+      '/images/properties/mukono-island-6.jpg'
+    ],
+    features: ['260 Acres', 'Private Mailo Land', 'Ready Title']
   }
 ];
 

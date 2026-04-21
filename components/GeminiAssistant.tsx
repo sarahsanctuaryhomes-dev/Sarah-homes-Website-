@@ -11,6 +11,15 @@ const GeminiAssistant: React.FC = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const [isInitialized, setIsInitialized] = useState(false);
 
+  // Initialize and Load History
+  useEffect(() => {
+    // Auto-open after delay
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
@@ -110,7 +119,7 @@ const GeminiAssistant: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-[60] flex flex-col items-end font-sans">
+    <div className="fixed bottom-6 right-6 z-[100] flex flex-col items-end font-sans">
       {isOpen && (
         <div className="bg-white rounded-2xl shadow-2xl w-[90vw] sm:w-96 mb-4 flex flex-col h-[500px] max-h-[70vh] border border-gray-200 animate-in fade-in slide-in-from-bottom-10 duration-300 overflow-hidden">
           {/* Header */}
